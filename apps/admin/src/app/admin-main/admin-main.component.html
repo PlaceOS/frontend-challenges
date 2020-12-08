@@ -1,0 +1,9 @@
+<shared-header [title]="appName" [activeUser]="activeUser" (onLogout)="doLogout()"></shared-header>
+<div class="lg:mx-auto max-w-screen-lg p-6 flex flex-row">
+    <div class="p-4 w-4/12">
+        <shared-user-viewer class="w-full"></shared-user-viewer>
+    </div>
+    <div class="p-4 w-8/12">
+        <shared-task-viewer class="w-full"></shared-task-viewer>
+    </div>
+</div>

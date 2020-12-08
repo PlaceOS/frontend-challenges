@@ -1,0 +1,18 @@
+<mat-card class="m-auto ">
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-content>
+        <form>
+            <mat-form-field class="flex flex-row w-full">
+                <input matInput placeholder="username" type="text" #username>
+            </mat-form-field>
+            <mat-form-field class="flex flex-row w-full">
+                <input (keyup.enter)="login(username.value,password.value)" matInput placeholder="password" type="password" #password>
+            </mat-form-field>
+        </form>
+        <div class="flex-row">
+            <span class="text-red-400">{{message}}</span>
+        </div>
+        <button mat-raised-button (click)="login(username.value,password.value)" >Login</button>
+    </mat-card-content>
+</mat-card>
+

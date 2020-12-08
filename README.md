@@ -1,3 +1,9 @@
+# Code Challange Submission by Marvin Yoong
+
+App deployed on github pages [client](https://vinnyo.github.io/frontend-challenges) , [admin](https://vinnyo.github.io/frontend-challenges/admin)
+
+---
+
 # PlaceOS Code Challenges
 
 ## Setup

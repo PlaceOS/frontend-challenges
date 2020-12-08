@@ -1,0 +1,12 @@
+<div class="flex flex-col w-full">
+    <span class="text-lg">Users</span>
+    <hr class="my-4">
+    <mat-selection-list #users [multiple]="false" (selectionChange)="onSelectionChange(users.selectedOptions.selected[0]?.value)">
+        <mat-list-option *ngFor="let user of userTodoStore.userTodos$ | async; trackBy:trackFn;" [value]="user">
+            <div class="flex flex-row w-full p-4 items-center">
+                <span><b>{{user.Name}}</b></span>
+                <span class="rounded-full py-1 px-3 bg-blue-500 text-white ml-auto">{{user.Tasks.length}}</span>
+            </div>
+        </mat-list-option>
+    </mat-selection-list>
+</div>

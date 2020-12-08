@@ -1,0 +1,14 @@
+<div class="flex flex-row items-center w-full mb-4 p-4 space-x-4 {{task.Status === doneStatus?'bg-green-100 border-green-800':'bg-gray-100 border-gray-800'}}  border-1">
+   
+    <span 
+        class="flex-grow mx-4 text-lg" 
+        [class.line-through]="task.Status === doneStatus" >{{task.Description}}</span>
+    
+    <button mat-flat-button color="warn" 
+        (click)="onDelete.emit(task.Id)">Delete</button>
+
+    <button *ngIf="task.Status !== doneStatus" 
+        mat-flat-button color="primary"
+        (click)="onComplete.emit(doneStatus)">Done</button>
+    
+</div>

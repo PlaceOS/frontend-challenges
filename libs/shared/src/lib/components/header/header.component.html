@@ -1,0 +1,10 @@
+<div class="bg-blue-600">
+    <div class="lg:mx-auto max-w-screen-lg p-6 flex flex-row items-center text-white">
+        <span class="text-3xl">{{title}}</span>
+        <ng-container *ngIf="activeUser">
+            <span class="ml-auto mr-3"><b>Hello {{activeUser.Name}}</b></span>
+            <button mat-raised-button (click)="logout()" >Logout</button>
+        </ng-container>
+        
+    </div>
+</div>
